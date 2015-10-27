@@ -1,1 +1,6 @@
 rootProject.name = 'andfix'
+/**
+include ':samples'
+project(':samples').projectDir= new File('/samples')
+include ':andfix'
+project(':andfix').projectDir= new File('/src')  ***/
