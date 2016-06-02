@@ -17,19 +17,18 @@
 
 package com.alipay.euler.andfix;
 
-import java.io.File;
-import java.io.IOException;
-import java.lang.reflect.Method;
-import java.util.Enumeration;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
 import android.content.Context;
 import android.util.Log;
 
 import com.alipay.euler.andfix.annotation.MethodReplace;
 import com.alipay.euler.andfix.security.SecurityChecker;
+
+import java.io.File;
+import java.lang.reflect.Method;
+import java.util.Enumeration;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import dalvik.system.DexFile;
 
@@ -179,7 +178,7 @@ public class AndFixManager {
 					fixClass(clazz, classLoader);
 				}
 			}
-		} catch (IOException e) {
+		} catch (Throwable e) {
 			Log.e(TAG, "pacth", e);
 		}
 	}
